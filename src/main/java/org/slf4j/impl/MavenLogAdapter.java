@@ -572,7 +572,7 @@ public final class MavenLogAdapter
      *          the exception (throwable) to log
      */
     public void error( String msg, Throwable t )
-    {
+    {      
         logger.error( msg, t );
     }
 

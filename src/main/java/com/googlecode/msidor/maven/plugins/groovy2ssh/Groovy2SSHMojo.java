@@ -20,6 +20,7 @@ import java.util.Map;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
+import org.slf4j.impl.StaticLoggerBinder;
 
 import com.googlecode.msidor.groovy2ssh.SSHManager;
 import com.jcraft.jsch.JSchException;
@@ -42,13 +43,13 @@ public class Groovy2SSHMojo extends AbstractMojo
 
     /**
      * SSH user name. REQUIRED
-     * @parameter 
+     * @parameter expression="${ssh.user.name}"
      */     
     String userName 			= null;
 
     /**
      * SSH user password. REQUIRED
-     * @parameter 
+     * @parameter expression="${ssh.user.password}"
      */     
     String password 			= null;
     
@@ -110,11 +111,11 @@ public class Groovy2SSHMojo extends AbstractMojo
 	@Override
 	public void execute() throws MojoExecutionException, MojoFailureException
 	{
+	    StaticLoggerBinder.setMavenLog( getLog() );
+	    
 	    SSHManager instance    = null;
 	    boolean    result      = false; 
-	    
-	    
-	    
+	    	    	    	    
 		getLog().info("Preparing SSH connection...");
 		try
 		{
