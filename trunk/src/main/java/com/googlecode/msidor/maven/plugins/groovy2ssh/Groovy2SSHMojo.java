@@ -101,6 +101,41 @@ public class Groovy2SSHMojo extends AbstractMojo
      * @parameter
      */
     private Map<String, Object> parameters = null;    
+        
+    /**
+     * Terminal type
+     * 
+     * @parameter
+     */
+    private String     ptyType = null;
+    
+    /**
+     * Terminal width, columns
+     * 
+     * @parameter
+     */
+    private int         col=0;
+    
+    /**
+     * Terminal height, rows
+     * 
+     * @parameter
+     */
+    private int         row=0;
+    
+    /**
+     * Terminal width, pixels
+     * 
+     * @parameter
+     */
+    private int         wp=0;
+    
+    /**
+     * Terminal height, pixel
+     * 
+     * @parameter
+     */
+    private int         hp=0;    
     
 	
     /**
@@ -119,7 +154,7 @@ public class Groovy2SSHMojo extends AbstractMojo
 		getLog().info("Preparing SSH connection...");
 		try
 		{
-		    instance = new SSHManager( userName, password, connectionIP, knownHostsFileName,connectionPort,connectionTimeOut,commandTimeOut );
+		    instance = new SSHManager( userName, password, connectionIP, knownHostsFileName,connectionPort,connectionTimeOut,commandTimeOut,ptyType,col,row,wp,hp );
 		}
 		catch(JSchException ex)
 		{
