@@ -3,7 +3,7 @@
 	<packaging>maven-plugin</packaging>
 	<groupId>com.googlecode.msidor.maven.plugins</groupId>
 	<artifactId>groovy2ssh-maven-plugin</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5-SNAPSHOT</version>
 
 	<name>groovy2ssh-maven-plugin</name>
 
@@ -42,9 +42,9 @@
 	</issueManagement>
 
 	<scm>
-		<connection>scm:svn:https://groovy2ssh-maven-plugin.googlecode.com/svn/tags/release-1.0.4</connection>
-		<developerConnection>scm:svn:https://groovy2ssh-maven-plugin.googlecode.com/svn/tags/release-1.0.4</developerConnection>
-		<url>https://groovy2ssh-maven-plugin.googlecode.com/svn/tags/release-1.0.4</url>
+		<connection>scm:svn:https://groovy2ssh-maven-plugin.googlecode.com/svn/trunk/</connection>
+		<developerConnection>scm:svn:https://groovy2ssh-maven-plugin.googlecode.com/svn/trunk/</developerConnection>
+		<url>https://groovy2ssh-maven-plugin.googlecode.com/svn/trunk/</url>
 	</scm>
 
 	<url>https://code.google.com/p/groovy2ssh-maven-plugin/</url>
