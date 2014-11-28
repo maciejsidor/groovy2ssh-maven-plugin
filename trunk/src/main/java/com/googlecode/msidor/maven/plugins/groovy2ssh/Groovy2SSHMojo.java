@@ -146,6 +146,11 @@ public class Groovy2SSHMojo extends AbstractMojo
 	@Override
 	public void execute() throws MojoExecutionException, MojoFailureException
 	{
+		
+        //Ignore the execution as the plugin is not configured at all for the project
+        if(connectionIP==null)
+            return;
+		
 	    StaticLoggerBinder.setMavenLog( getLog() );
 	    
 	    SSHManager instance    = null;
