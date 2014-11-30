@@ -2,6 +2,8 @@
 
 = Introduction =
 
-groovy2ssh-maven-plugin maven plugin allows to execute shell commands via groovy script on remote host through ssh connection. You may interact with remote host in your groovy script by the groovy API provided by . 
+groovy2ssh-maven-plugin maven plugin allows to execute shell commands via groovy script on remote host through ssh connection. You may interact with remote host in your groovy script by the groovy API provided by [https://code.google.com/p/groovy2ssh/ com.googlecode.msidor.groovy2ssh library]. 
 
-Please check the project page for more information about the API provided. 
+Please check the [https://code.google.com/p/groovy2ssh/ project page] for more information about the API provided. 
+
+= Usage =
