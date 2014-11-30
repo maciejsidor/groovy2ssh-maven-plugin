@@ -1,4 +1,4 @@
-#summary Introduction to functionnality of groovy2ssh-maven-plugin.
+#summary Introduction to functionnality of groovy2ssh-maven-plugin and how to use groovy2ssh-maven-plugin in your maven project.
 
 = Introduction =
 
@@ -7,3 +7,28 @@ groovy2ssh-maven-plugin maven plugin allows to execute shell commands via groovy
 Please check the [https://code.google.com/p/groovy2ssh/ project page] for more information about the API provided. 
 
 = Usage =
+
+== Maven repository ==
+
+The groovy2ssh-maven-plugin is hosted on OSS SONATYPE repository, thus, in order to use it in your maven project you must add the OSS SONATYPE repository configuration to your pom.xml file.
+
+Add following code to your pom.xml:
+
+{{{
+<repositories>
+  <repository>
+    <id>sonatype-oss-public</id>
+    <url>https://oss.sonatype.org/content/groups/public/</url>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>
+}}}
+
+== Downloads ==
+
+To see all available releases downloads visit [https://oss.sonatype.org/content/groups/public/com/googlecode/msidor/maven/plugins/groovy2ssh-maven-plugin/ OSS SONATYPE repository for groovy2ssh-maven-plugin].
